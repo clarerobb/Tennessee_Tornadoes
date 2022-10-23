@@ -9,4 +9,4 @@ Once data is cleaned, tables will be created in PgAdmin for use with PostgreSQL 
 
 
 ## Dashboard
-Once dashboard displays are determined, they will be created using Javascript.
+Once a general dashboard display layout is determined, the Dashboard will be created using Javascript to be displayed as an interactive webpage.  Depending on needs, CSS, D3, and Bootstrap components could be used to enhance the dashboard displays.
