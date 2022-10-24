@@ -21,6 +21,13 @@ For this project we filtered the data for tornadoes just in the state of Tenness
 ## Communication
 In order to stay updated on status of each part of the project, we will message regularly through a direct message in slack and regular zoom meetings outside of designated class times.
 
+## Data Cleaning and Analysis
+Raw data is in CSV file. Using Excel, CSV file was filtered for Tennessee data only. Then, using Python and Pandas, the filtered dataset was be loaded into Jupyter Notebook for Exploratory Data Analysis and Data Cleaning.
+
+## Database Storage
+Once data is cleaned, a table was created in PgAdmin for use with PostgreSQL to match the dataset. Then, the cleaned dataset will be imported into the Machine Learning Model with Psycopg2.
+
 ## Machine Learning Model
 
-## Database
+## Dashboard
+Once a general dashboard display layout is determined, the Dashboard will be created using Javascript to be displayed as an interactive webpage. Depending on needs, CSS, D3, and Bootstrap components could be used to enhance the dashboard displays.
