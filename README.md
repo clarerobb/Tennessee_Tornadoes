@@ -28,7 +28,7 @@ Raw data is in CSV file. Using Excel, CSV file was filtered for Tennessee data o
 Once data is cleaned, a table was created in PgAdmin for use with PostgreSQL to match the dataset. Then, the cleaned dataset will be imported into the Machine Learning Model with Psycopg2.
 
 ## Machine Learning Model
-In order to use machine learning to predict outcomes for project questions, different machine learning models will need to be created.
+The machine learning module portion is composed of two portions. The testing and trial ipynb file is used to test multiple machine learning learning models on each target to determine which models yield the highest efficiency rates. 
 
 For the following question, a classification model will be created:
 - What counties are most likely to experience tornadoes? Supervised learning with Random Forest Algorithms will be used. This algorithm is robust against overfitting and runs efficiently on large datasets.
