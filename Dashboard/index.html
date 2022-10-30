@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tennessee Tornadoes</title>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
+  <!-- d3 JavaScript -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  
+</head>
+
+<body class="background">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-1 col-md-2">
+      </div>
+      <div class="row col-xs-10 col-md-8">
+        <nav class="navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="#selDataset">LINK 1</a></li>
+              <li><a href="#bar">LINK 2</a></li>
+              <li><a href="#gauge">LINK 3</a></li>
+              <li><a href="#bubble">LINK 4</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="col-xs-1 col-md-2">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-1 col-md-2">
+      </div>
+
+      <div class="row col-xs-10 col-md-8">
+        <div class="jumbotron text-center text-white"
+          style="border-style: solid; border-color:rgb(2, 37, 58); border-width: 2;">
+          <h1><font color="#919389">Tennessee Tornadoes</font></h1>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="col-xs-1 col-md-2"></div>
+    </div>
+    <div class="row">
+ 
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <font color="white">
+          <div class="col-md-4">
+            
+              <h3>TEXT 1<small><font color="#bfbfbf"><br>Smaller Text</font></small></h3>
+            
+            </div>
+          <div class="col-md-8">
+            
+              Paragraph Text 1<br><br>
+              Paragraph Text 2<br><br>
+              Paragraph Text 3
+            
+            </div>
+        </font>
+      </div>
+  </div><br>
+    <div class="row">
+      <div class="col-xs-6 col-sm-4 col-md-2">
+        <div class="well">
+          <h5>Tornado Select:</h5> 
+
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Tornado Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"> 
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-10 col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-xs-10 col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <br>
+
+    <!-- <div class="row">
+      <div class="col-xs-12">
+        <div id="bubble"></div>
+      </div>
+    </div> -->
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="mapid"></div>
+        
+      </div>
+    </div>
+  </div>
+    
+    
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+  <!-- API key -->
+  <script type="text/javascript" src="static/js/config.js"></script>
+
+  <!-- Our Javascript -->
+  
+  <script type="text/javascript" src="static/js/challenge_logic.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>
