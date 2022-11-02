@@ -65,10 +65,34 @@ Additionally, each tornadoes starting and ending counties were calculated in [Ge
 - `total_tn_tornadoes` was imported into [Final_Machine_Learning_Pred.ipynb](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Machine_Learning/Final_Machine_Learning_Pred.ipynb) with Psycopg2.
 
 ## Machine Learning Model
+There are three targets that we are aiming to predict: Property loss the that the tornados will cause, Months in which the Tornados will occur, and Magnitude that the tornados will have. 
+
 - Description of preliminary data preprocessing 
-- Description of preliminary feature engineering and preliminary feature selection, including their decision-making process 
+
+The data was prepared through an ETL process. 
+Intitially the data contained over 50,0000 rows of data, and through the use of Google Colabrotory we were able to filter down the rows to 1114 rows. 
+Some of the data was scaled inconsistently before 1970 so we had to standardize the scale of measurements. 
+The data set provided us initially with only coordinates, so we used Geopy to extract the different counties that werea affected. We also dropped columns that didn't relate to our purposes or were inconsistent. 
+
+- Description of preliminary feature engineering and preliminary feature selectio, including their decision-making process 
+
+The target data is seperated from the original dataset, and then .detdummies() is used to attribute numerical assignments to categorical data. The decision to select different features for each target, was based on the relevency and accuracy affects that each feature applies towards the respective targets. To determine the affect that each variable had on the accuracy score, we ran different features through the machine learning trial and error code to expierenment with which features increased and decreased the accuracy score. Once we were able to reach at least a 50% aaccuracy score with each target, we used the machine learning model yielding the highest accuracy score, with the features that were most relevent and yielded the highest accuracy scores, and places them into the final machine learning module with their respective accuracy scores. 
+
 - Description of how data was split into training and testing sets 
+
+Using the train_test_split method, we seperated the data into training and testing data. For the Trial and Error file, we resampled each training samples so that the results of each model were represented correctly. 
+
 - Explanation of model choice, including limitations and benefits
+The models were chosen by creating a file with a large variety of different machine learning models. We expierented with the inputs, ran the training data through all of the models and determined which models were working in the most appropriate manner. For some of our models, we created a pipeline of different models which allowed us to run our data through algorithms stacked on each other. However, because we are aiming to make numerical predictions about our targets, all of our models in our final document are linear regression models in some form. 
+
+Acoomplished Results 
+
+We have been able to achieve at least 50% accuracy with each of our targets. The accuracy that was achieved throughout the trial and testing was recorded and shown on the final document. Additionally, each version of the machine learning trail and error was commited to the savannah_posner branch after each target had achieved 50% accuracy. 
+
+
+
+
+
 
 ## Presentation
 Presentation can be found [here](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Presentations/Final%20Project%20Segment%202%20Presentation.pdf).
