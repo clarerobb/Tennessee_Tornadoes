@@ -65,7 +65,7 @@ Additionally, each tornadoes starting and ending counties were calculated in [Ge
 - `total_tn_tornadoes` was imported into [Final_Machine_Learning_Pred.ipynb](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Machine_Learning/Final_Machine_Learning_Pred.ipynb) with Psycopg2.
 
 ## Machine Learning Model
-There are three targets that we are aiming to predict: Property loss the that the tornados will cause, Months in which the Tornados will occur, and Magnitude that the tornados will have. 
+There are three targets that we are aiming to predict: Property loss the that the tornados will cause, Months in which the tornados will occur, and Magnitude that the tornados will have. 
 
 - Description of preliminary data preprocessing 
 
