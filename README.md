@@ -45,6 +45,13 @@ In order to stay updated on status of each part of the project, we will message 
 - Jupyter Notebook
 
 #### Dashboard
+- Tableau
+- Javascript
+- Bootstap
+- Leaflet
+- D3
+- HTML
+- CSS
 
 ## Data Cleaning
 Raw data was extracted from data.world in [Historical_Tornado_Tracks_Raw.csv](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Resources/Historical_Tornado_Tracks_Raw.csv). The file was filtered for Tennessee data only in Excel. Then, using Python and Pandas, the filtered dataset was be loaded into Jupyter Notebook in [ETL_Tornadoes copy.ipynb](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/ETL/ETL_Tornados%20copy.ipynb)for data cleaning.
@@ -58,17 +65,15 @@ Additionally, each tornadoes starting and ending counties were calculated in [Ge
 - `total_tn_tornadoes` was imported into [Final_Machine_Learning_Pred.ipynb](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Machine_Learning/Final_Machine_Learning_Pred.ipynb) with Psycopg2.
 
 ## Machine Learning Model
-In order to use machine learning to predict outcomes for project questions, different machine learning models will need to be created.
-
-Machine learning models will be created to predict the following:
-- Magnitude of tornadoes
-- Location of tornadoes
-- Amount of property damage
-
-There are two working ipynb files in the Machine Learning folder. `ML_Trial_Error.ipynb` is being used to test different learning algorithms that will produce the most efficient and accurate results. Once that is determined, code will be transferred to `Final_Machine_Learning_Pred.ipynb` which be used to connect to the database.
+- Description of preliminary data preprocessing 
+- Description of preliminary feature engineering and preliminary feature selection, including their decision-making process 
+- Description of how data was split into training and testing sets 
+- Explanation of model choice, including limitations and benefits
 
 ## Presentation
 Presentation can be found [here](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Presentations/Final%20Project%20Segment%202%20Presentation.pdf).
 
 ## Dashboard
-Once a general dashboard display layout is determined, the Dashboard will be created using Javascript to be displayed as an interactive webpage. Depending on needs, CSS, D3, and Bootstrap components could be used to enhance the dashboard displays.
+- Storyboard of the dashboard can be found here. The dashboard will contain two bar charts made in Tableau that display the magnitude over time and frequency over time, respectively. Additionally, the dashboard will display an interactive map of each tornado.
+- The dashboard will be visualized on an interactive webpage with the following tools: Tableau, Javascript, Bootstap, Leaflet, D3, HTML, CSS.
+- Tornadoes will be mapped on the dashboard. The map will be interactive with information on each tornado displayed in a pop-up window and a filter based on magnitude. 
