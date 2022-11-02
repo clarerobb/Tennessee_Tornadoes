@@ -77,7 +77,7 @@ The data set provided us initially with only coordinates, so we used Geopy to ex
 - Description of preliminary feature engineering and preliminary feature selectio, including their decision-making process 
 
 The target data is seperated from the original dataset, and then .detdummies() is used to attribute numerical assignments to categorical data. The decision to select different features for each target, was based on the relevency and accuracy affects that each feature applies towards the respective targets. To determine the affect that each variable had on the accuracy score, we ran different features through the machine learning trial and error code to expierenment with which features increased and decreased the accuracy score. Once we were able to reach at least a 50% aaccuracy score with each target, we used the machine learning model yielding the highest accuracy score, with the features that were most relevent and yielded the highest accuracy scores, and places them into the final machine learning module with their respective accuracy scores. 
-
+![Results](https://raw.githubusercontent.com/clarerobb/Tennessee_Tornadoes/main/Machine_Learning/Machine_Images/Screen%20Shot%202022-11-02%20at%201.12.32%20PM.png )
 - Description of how data was split into training and testing sets 
 
 Using the train_test_split method, we seperated the data into training and testing data. For the Trial and Error file, we resampled each training samples so that the results of each model were represented correctly. 
@@ -90,7 +90,7 @@ Acoomplished Results
 We have been able to achieve at least 50% accuracy with each of our targets. The accuracy that was achieved throughout the trial and testing was recorded and shown on the final document. Additionally, each version of the machine learning trail and error was commited to the savannah_posner branch after each target had achieved 50% accuracy. 
 
 
-
+![Results](https://raw.githubusercontent.com/clarerobb/Tennessee_Tornadoes/main/Machine_Learning/Machine_Images/Screen%20Shot%202022-11-02%20at%201.12.25%20PM.png )
 
 
 
