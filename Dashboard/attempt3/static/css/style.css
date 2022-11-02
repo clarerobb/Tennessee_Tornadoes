@@ -1,0 +1,98 @@
+html,
+body {
+    color: #000000;
+}
+.jumbotron {
+    background-image: url("../images/jumbo_bg.png");
+    background-size: 100% 100%;
+    text-align: center;
+}
+.background {
+    background-image: linear-gradient(#6e6e6e , #d8d8d8);
+}
+.center {
+    margin: auto;
+    padding: 10px;
+}
+.navbar-default {
+    background: rgb(71, 71, 71) !important;
+}
+
+ul{
+  margin:0;
+  padding:0;
+  display:flex;
+}
+
+ul li{
+  list-style:none;
+  margin:0 20px;
+  transition:0.5s;
+}
+
+ul li a{
+  display: block;
+  position:relative;
+  text-decoration:none;
+  padding:5px;
+  font-size:18px;
+  font-family: sans-serif;
+  color:#fff;
+  text-transform:uppercase;
+  transition:0.5s;
+}
+
+ul:hover li a{
+  transform:scale(1.3);
+  opacity:0.8;
+  filter:blur(4px);
+}
+
+ul li a:hover{
+  transform:scale(1.3);
+  opacity:1;
+  filter:blur(0);
+  text-decoration:none;
+  color:#fff;
+}
+
+ul li a:before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:#c2a080;
+  transition:0.5s;
+  transform-origin:right;
+  transform:scaleX(0);
+  z-index:-1;
+}
+
+ul li a:hover:before{
+  transition:transform 0.5s;
+  transform-origin:left;
+  transform:scaleX(1);
+}
+
+#mapid {
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  margin: 0;
+}
+.legend {
+  padding: 10px;
+  line-height: 18px;
+  color: #555;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.legend i {
+  float: left;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  opacity: 0.7;
+}
