@@ -21,6 +21,13 @@ For this project we filtered the data for tornadoes just in the state of Tenness
 ## Communication
 In order to stay updated on status of each part of the project, we will message regularly through a direct message in slack and regular zoom meetings outside of designated class times.
 
+## Team and Roles
+- Sari Broudy: Dashboard
+- Savannah Posner: Machine Learning
+- Jordan Holley Riggs: Presentation
+- Matt Riley: Technology/Dashboard
+- Clare Robbins: GitHub/Dashboard
+
 ## Tools
 #### Data Cleaning 
 - Python 3.7.13 (pandas and geopy libraries)
@@ -34,6 +41,8 @@ In order to stay updated on status of each part of the project, we will message 
 - Psycopg2
 
 #### Machine Learning
+- Python (pandas, imbalanced-learn, scikit-Learn, numpy libraries)
+- Jupyter Notebook
 
 #### Dashboard
 
@@ -57,6 +66,9 @@ Machine learning models will be created to predict the following:
 - Amount of property damage
 
 There are two working ipynb files in the Machine Learning folder. `ML_Trial_Error.ipynb` is being used to test different learning algorithms that will produce the most efficient and accurate results. Once that is determined, code will be transferred to `Final_Machine_Learning_Pred.ipynb` which be used to connect to the database.
+
+## Presentation
+Presentation can be found [here](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Presentations/Final%20Project%20Segment%202%20Presentation.pdf).
 
 ## Dashboard
 Once a general dashboard display layout is determined, the Dashboard will be created using Javascript to be displayed as an interactive webpage. Depending on needs, CSS, D3, and Bootstrap components could be used to enhance the dashboard displays.
