@@ -22,7 +22,7 @@ For this project we filtered the data for tornadoes just in the state of Tenness
 In order to stay updated on status of each part of the project, we will message regularly through a direct message in slack and regular zoom meetings outside of designated class times.
 
 ## Team and Roles
-- Sari Broudy: Database
+- Sari Broudy: Database/Dashboard
 - Savannah Posner: Machine Learning
 - Jordan Holley Riggs: Presentation
 - Matt Riley: Technology/Dashboard
@@ -74,6 +74,6 @@ Additionally, each tornadoes starting and ending counties were calculated in [Ge
 Presentation can be found [here](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Presentations/Final%20Project%20Segment%202%20Presentation.pdf).
 
 ## Dashboard
-- Storyboard of the dashboard can be found here. The dashboard will contain two bar charts made in Tableau that display the magnitude over time and frequency over time, respectively. Additionally, the dashboard will display an interactive map of each tornado.
+- Storyboard of the dashboard can be found [here](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Dashboard/TN_Tornadoes.pdf). The dashboard will contain two bar charts made in Tableau that display the magnitude over time and frequency over time, respectively. Additionally, the dashboard will display an interactive map of each tornado.
 - The dashboard will be visualized on an interactive webpage with the following tools: Tableau, Javascript, Bootstap, Leaflet, D3, HTML, CSS.
 - Tornadoes will be mapped on the dashboard. The map will be interactive with information on each tornado displayed in a pop-up window and a filter based on magnitude. 
