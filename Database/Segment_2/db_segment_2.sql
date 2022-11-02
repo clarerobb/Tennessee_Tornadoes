@@ -75,3 +75,16 @@ INTO total_tn_tornadoes
 FROM cleaned_tn_tornadoes AS ctt
 LEFT JOIN counties AS c
 ON c.index=ctt.index;
+
+SELECT date,
+mag, 
+property_loss,
+fatalities,
+injuries,
+starting_county,
+ending_county
+INTO cat4_cat5_tornadoes
+FROM total_tn_tornadoes
+WHERE (mag>3) 
+
+SELECT * FROM cat4_cat5_tornadoes;
