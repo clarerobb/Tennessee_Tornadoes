@@ -22,11 +22,11 @@ For this project we filtered the data for tornadoes just in the state of Tenness
 In order to stay updated on status of each part of the project, we will message regularly through a direct message in slack and regular zoom meetings outside of designated class times.
 
 ## Team and Roles
-- Sari Broudy: Dashboard
+- Sari Broudy: Database
 - Savannah Posner: Machine Learning
 - Jordan Holley Riggs: Presentation
 - Matt Riley: Technology/Dashboard
-- Clare Robbins: GitHub/Dashboard
+- Clare Robbins: GitHub/Database
 
 ## Tools
 #### Data Cleaning 
