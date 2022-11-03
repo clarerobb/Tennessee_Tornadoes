@@ -26,7 +26,7 @@ let dark = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{
 let map = L.map('mapid', {
 	center: [36.0, -86.7],
 	zoom: 7,
-	layers: [outdoors]
+	layers: [dark]
 });
 
 // Create a base layer that holds all three maps.
@@ -74,13 +74,32 @@ function loadCSVData() {
 
 function addMarker(coord) {
   L.polyline([[coord.SLAT, coord.SLON], [coord.ELAT, coord.ELON]], {
-    color: "red"
+    color: getColor(coord.MAG)
   }).bindPopup("<b>FID: " + coord.FID + " </b><br>Date: " + coord.DATE + " | Time: " + coord.TIME + "<hr><font size=2><b>Magnitude:</b> EF" + coord.MAG)
     .addTo(map);
 };
 
 loadCSVData();
 
+  // This function determines the color of the marker based on the magnitude of the earthquake.
+  function getColor(magnitude) {
+    if (magnitude == 5) {
+      return "#de0014";
+    }
+    if (magnitude == 4) {
+      return "#ff9900";
+    }
+    if (magnitude == 3) {
+      return "#eecc00";
+    }
+    if (magnitude == 2) {
+      return "#01b10c";
+    }
+    if (magnitude == 1) {
+      return "#009eff";
+    }
+    return "#7a30a1";
+  }
 
 // // Retrieve the earthquake GeoJSON data.
 // d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
@@ -254,11 +273,6 @@ loadCSVData();
 
 
 
-
-
-
-
-
   // Here we create a legend control object.
 let legend = L.control({
   position: "bottomleft"
@@ -270,12 +284,12 @@ legend.onAdd = function() {
 
   const magnitudes = [0, 1, 2, 3, 4, 5];
   const colors = [
-    "#98ee00",
-    "#d4ee00",
+    "#7a30a1",
+    "#009eff",
+    "#01b10c",
     "#eecc00",
-    "#ee9c00",
-    "#ea822c",
-    "#ea2c2c",
+    "#ff9900",
+    "#de0014",
   ];
 
 // Looping through our intervals to generate a label with a colored square for each interval.
