@@ -38,17 +38,23 @@ let baseMaps = {
 
 // D1.1. Add a 2nd layer group for the tectonic plate data.
 // D2.1. Add a 3rd layer group for the major earthquake data.
-let allEarthquakes = new L.LayerGroup();
-let tPlates = new L.LayerGroup();
-let majEqs = new L.LayerGroup();
+let y1950 = new L.LayerGroup();
+let y1960 = new L.LayerGroup();
+let y1970 = new L.LayerGroup();
+let y1980 = new L.LayerGroup();
+let y1990 = new L.LayerGroup();
+let y2000 = new L.LayerGroup();
 
 
 // D1.2. Add a reference to the tectonic plates group to the overlays object.
 // D2.2. Add a reference to the major earthquake group to the overlays object.
 let overlays = {
-  "Tectonic Plates": tPlates,
-  "Earthquakes": allEarthquakes,
-  "Major Earthquakes": majEqs,
+  "1950-1959": y1950,
+  "1960-1969": y1960,
+  "1970-1979": y1970,
+  "1980-1989": y1980,
+  "1990-1999": y1990,
+  "2000-2013": y2000,
 };
 
 // Then we add a control to the map that will allow the user to change which
