@@ -21,6 +21,13 @@ For this project we filtered the data for tornadoes just in the state of Tenness
 ## Communication
 In order to stay updated on status of each part of the project, we will message regularly through a direct message in slack and regular zoom meetings outside of designated class times.
 
+## Team and Roles
+- Sari Broudy: Database/Dashboard
+- Savannah Posner: Machine Learning
+- Jordan Holley Riggs: Presentation
+- Matt Riley: Technology/Dashboard
+- Clare Robbins: GitHub/Database
+
 ## Tools
 #### Data Cleaning 
 - Python 3.7.13 (pandas and geopy libraries)
@@ -34,8 +41,17 @@ In order to stay updated on status of each part of the project, we will message 
 - Psycopg2
 
 #### Machine Learning
+- Python (pandas, imbalanced-learn, scikit-Learn, numpy libraries)
+- Jupyter Notebook
 
 #### Dashboard
+- Tableau
+- Javascript
+- Bootstap
+- Leaflet
+- D3
+- HTML
+- CSS
 
 ## Data Cleaning
 Raw data was extracted from data.world in [Historical_Tornado_Tracks_Raw.csv](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Resources/Historical_Tornado_Tracks_Raw.csv). The file was filtered for Tennessee data only in Excel. Then, using Python and Pandas, the filtered dataset was be loaded into Jupyter Notebook in [ETL_Tornadoes copy.ipynb](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/ETL/ETL_Tornados%20copy.ipynb)for data cleaning.
@@ -49,14 +65,39 @@ Additionally, each tornadoes starting and ending counties were calculated in [Ge
 - `total_tn_tornadoes` was imported into [Final_Machine_Learning_Pred.ipynb](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Machine_Learning/Final_Machine_Learning_Pred.ipynb) with Psycopg2.
 
 ## Machine Learning Model
-In order to use machine learning to predict outcomes for project questions, different machine learning models will need to be created.
+There are three targets that we are aiming to predict: Property loss the that the tornados will cause, Months in which the tornados will occur, and Magnitude that the tornados will have. 
 
-Machine learning models will be created to predict the following:
-- Magnitude of tornadoes
-- Location of tornadoes
-- Amount of property damage
+- Description of preliminary data preprocessing 
 
-There are two working ipynb files in the Machine Learning folder. `ML_Trial_Error.ipynb` is being used to test different learning algorithms that will produce the most efficient and accurate results. Once that is determined, code will be transferred to `Final_Machine_Learning_Pred.ipynb` which be used to connect to the database.
+The data was prepared through an ETL process. 
+Intitially the data contained over 50,0000 rows of data, and through the use of Google Colabrotory we were able to filter down the rows to 1114 rows. 
+Some of the data was scaled inconsistently before 1970 so we had to standardize the scale of measurements. 
+The data set provided us initially with only coordinates, so we used Geopy to extract the different counties that werea affected. We also dropped columns that didn't relate to our purposes or were inconsistent. 
+
+- Description of preliminary feature engineering and preliminary feature selectio, including their decision-making process 
+
+The target data is seperated from the original dataset, and then .detdummies() is used to attribute numerical assignments to categorical data. The decision to select different features for each target, was based on the relevency and accuracy affects that each feature applies towards the respective targets. To determine the affect that each variable had on the accuracy score, we ran different features through the machine learning trial and error code to expierenment with which features increased and decreased the accuracy score. Once we were able to reach at least a 50% aaccuracy score with each target, we used the machine learning model yielding the highest accuracy score, with the features that were most relevent and yielded the highest accuracy scores, and places them into the final machine learning module with their respective accuracy scores. 
+![Results](https://raw.githubusercontent.com/clarerobb/Tennessee_Tornadoes/main/Machine_Learning/Machine_Images/Screen%20Shot%202022-11-02%20at%201.12.32%20PM.png )
+- Description of how data was split into training and testing sets 
+
+Using the train_test_split method, we seperated the data into training and testing data. For the Trial and Error file, we resampled each training samples so that the results of each model were represented correctly. 
+
+- Explanation of model choice, including limitations and benefits
+The models were chosen by creating a file with a large variety of different machine learning models. We expierented with the inputs, ran the training data through all of the models and determined which models were working in the most appropriate manner. For some of our models, we created a pipeline of different models which allowed us to run our data through algorithms stacked on each other. However, because we are aiming to make numerical predictions about our targets, all of our models in our final document are linear regression models in some form. 
+
+Acoomplished Results 
+
+We have been able to achieve at least 50% accuracy with each of our targets. The accuracy that was achieved throughout the trial and testing was recorded and shown on the final document. Additionally, each version of the machine learning trail and error was commited to the savannah_posner branch after each target had achieved 50% accuracy. 
+
+
+![Results](https://raw.githubusercontent.com/clarerobb/Tennessee_Tornadoes/main/Machine_Learning/Machine_Images/Screen%20Shot%202022-11-02%20at%201.12.25%20PM.png )
+
+
+
+## Presentation
+Presentation can be found [here](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Presentations/Final%20Project%20Segment%202%20Presentation.pdf).
 
 ## Dashboard
-Once a general dashboard display layout is determined, the Dashboard will be created using Javascript to be displayed as an interactive webpage. Depending on needs, CSS, D3, and Bootstrap components could be used to enhance the dashboard displays.
+- Storyboard of the dashboard can be found [here](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Dashboard/TN_Tornadoes.pdf). The dashboard will contain two bar charts made in Tableau that display the magnitude over time and frequency over time, respectively. Additionally, the dashboard will display an interactive map of each tornado.
+- The dashboard will be visualized on an interactive webpage with the following tools: Tableau, Javascript, Bootstap, Leaflet, D3, HTML, CSS.
+- Tornadoes will be mapped on the dashboard. The map will be interactive with information on each tornado displayed in a pop-up window and a filter based on magnitude. 
