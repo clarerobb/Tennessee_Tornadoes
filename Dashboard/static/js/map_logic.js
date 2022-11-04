@@ -2,7 +2,7 @@
 console.log("working");
 
 // We create the tile layer that will be the background of our map.
-let outdoors = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+let night = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/navigation-night-v1/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom: 18,
 	accessToken: API_KEY
@@ -31,9 +31,9 @@ let map = L.map('mapid', {
 
 // Create a base layer that holds all three maps.
 let baseMaps = {
-  "Outdoor Map": outdoors,
-  "Light Map": light,
-  "Dark Map": dark
+  "Dark Map": dark,
+  "Night Map": night,
+  "Light Map": light,  
 };
 
 // D1.1. Add a 2nd layer group for the tectonic plate data.
@@ -68,6 +68,7 @@ function loadCSVData() {
     data.forEach(function(coord) {
       console.log(coord)
       addMarker(coord);
+      addCircle(coord);
     });
   });
 };
@@ -80,6 +81,16 @@ function addMarker(coord) {
 };
 
 loadCSVData();
+
+function addCircle(coord) {
+  L.circle([coord.SLAT, coord.SLON], {
+  color: getColor(coord.MAG),
+  fillColor: getColor(coord.MAG),
+  fillOpacity: 0.5,
+  radius: 500
+}).bindPopup("<b>FID: " + coord.FID + " </b><br>Date: " + coord.DATE + " | Time: " + coord.TIME + "<hr><font size=2><b>Magnitude:</b> EF" + coord.MAG)
+  .addTo(map);
+};
 
   // This function determines the color of the marker based on the magnitude of the earthquake.
   function getColor(magnitude) {
