@@ -21,6 +21,26 @@ For this project we filtered the data for tornadoes just in the state of Tenness
 ## Communication
 In order to stay updated on status of each part of the project, we will message regularly through a direct message in slack and regular zoom meetings outside of designated class times.
 
+<<<<<<< HEAD
+## Data Cleaning and Analysis
+Raw data is in CSV file. Using Excel, CSV file was filtered for Tennessee data only. Then, using Python and Pandas, the filtered dataset was be loaded into Jupyter Notebook for Exploratory Data Analysis and Data Cleaning.
+
+## Database Storage
+Once data is cleaned, a table was created in PgAdmin for use with PostgreSQL to match the dataset. Then, the cleaned dataset will be imported into the Machine Learning Model with Psycopg2.
+
+## Machine Learning Model
+In order to use machine learning to predict outcomes for project questions, different machine learning models will need to be created.
+
+Machine learning models will be created to predict the following:
+- Magnitude of tornadoes
+- Location of tornadoes
+- Amount of property damage
+
+There are two working ipynb files in the Machine Learning folder. `ML_Trial_Error.ipynb` is being used to test different learning algorithms that will produce the most efficient and accurate results. Once that is determined, code will be transferred to `Final_Machine_Learning_Pred.ipynb` which be used to connect to the database.
+
+## Dashboard
+Once a general dashboard display layout is determined, the Dashboard will be created using Javascript to be displayed as an interactive webpage. Depending on needs, CSS, D3, and Bootstrap components could be used to enhance the dashboard displays.
+=======
 ## Team and Roles
 - Sari Broudy: Database/Dashboard
 - Savannah Posner: Machine Learning
@@ -101,3 +121,4 @@ Presentation can be found [here](https://github.com/clarerobb/Tennessee_Tornadoe
 - Storyboard of the dashboard can be found [here](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Dashboard/TN_Tornadoes.pdf). The dashboard will contain two bar charts made in Tableau that display the magnitude over time and frequency over time, respectively. Additionally, the dashboard will display an interactive map of each tornado.
 - The dashboard will be visualized on an interactive webpage with the following tools: Tableau, Javascript, Bootstap, Leaflet, D3, HTML, CSS.
 - Tornadoes will be mapped on the dashboard. The map will be interactive with information on each tornado displayed in a pop-up window and a filter based on magnitude. 
+>>>>>>> f1e0e59103cfb06cee620946e2654a706769243e
