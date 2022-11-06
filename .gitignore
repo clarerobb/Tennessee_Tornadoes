@@ -1,2 +1,18 @@
+<<<<<<< HEAD
 # Ignore the config.js file
 config.jsMachine_Learning/.ipynb_checkpoints/
+=======
+Machine_Learning/.ipynb_checkpoints/Final_Machine_Learning_Pred-checkpoint.ipynb
+Machine_Learning/.ipynb_checkpoints/GetCounties-checkpoint.ipynb
+Machine_Learning/.ipynb_checkpoints/ML_Trial_Error-checkpoint.ipynb
+Machine_Learning/.DS_Store
+SPC_severe_database_description.pdf
+ETL/.DS_Store
+Database/.DS_Store
+Working_README/.DS_Store
+.ipynb_checkpoints
+config.js
+.DS_Store
+Machine_Learning/__pycache__/
+Machine_Learning/config.py
+>>>>>>> bf4156670804bc6bf8aafb60d2b9bd83d08a9a51
