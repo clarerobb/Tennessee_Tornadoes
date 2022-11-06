@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Machine_Learning/.ipynb_checkpoints/Final_Machine_Learning_Pred-checkpoint.ipynb
 Machine_Learning/.ipynb_checkpoints/GetCounties-checkpoint.ipynb
 Machine_Learning/.ipynb_checkpoints/ML_Trial_Error-checkpoint.ipynb
@@ -7,9 +6,8 @@ SPC_severe_database_description.pdf
 ETL/.DS_Store
 Database/.DS_Store
 Working_README/.DS_Store
-.DS_Store
 .ipynb_checkpoints
-=======
-# Ignore the config.js file
 config.js
->>>>>>> f1e0e59103cfb06cee620946e2654a706769243e
+.DS_Store
+Machine_Learning/__pycache__/
+Machine_Learning/config.py
