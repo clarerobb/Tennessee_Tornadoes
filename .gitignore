@@ -9,4 +9,5 @@ Working_README/.DS_Store
 .ipynb_checkpoints
 config.js
 .DS_Store
-
+Machine_Learning/__pycache__/
+Machine_Learning/config.py
