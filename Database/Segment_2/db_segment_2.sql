@@ -75,8 +75,6 @@ INTO total_tn_tornadoes
 FROM cleaned_tn_tornadoes AS ctt
 LEFT JOIN counties AS c
 ON c.index=ctt.index;
-<<<<<<< HEAD
-=======
 
 SELECT date,
 mag, 
@@ -90,4 +88,3 @@ FROM total_tn_tornadoes
 WHERE (mag>3) 
 
 SELECT * FROM cat4_cat5_tornadoes;
->>>>>>> f1e0e59103cfb06cee620946e2654a706769243e
