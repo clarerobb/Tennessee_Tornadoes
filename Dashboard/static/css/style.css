@@ -94,6 +94,12 @@ ul{
     opacity: 0.7;
   }
  
+  .carousel-inner{
+    width:100%;
+    display: flex;
+    justify-content: center; 
+    max-height: 400x !important;
+  }
 
 
 
