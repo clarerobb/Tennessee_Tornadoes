@@ -43,7 +43,7 @@ CREATE TABLE cleaned_tn_tornadoes(
 			WID				INT,
 			Fatalities		INT,
 			Injuries		INT,
-			Property_Loss 	DEC
+			Property_Loss 	INT
 );
 
 CREATE TABLE counties(
