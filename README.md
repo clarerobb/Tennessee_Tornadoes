@@ -66,9 +66,9 @@ Additionally, each tornadoes starting and ending counties were calculated in [Ge
 
 ## Machine Learning Model
 There are three targets that we are aiming to predict: 
-- Property loss the that the tornados will cause,
-- Months in which the tornados will occur, and 
-- Magnitude that the tornados will have. 
+- Property loss the that the tornadoes will cause.
+- Months in which the tornadoes will occur. 
+- Magnitude that the tornadoes will have. 
 
 - The preliminary data was prepared through an ETL process. Intitially, the data contained over 50,0000 rows of data, and through the use of Google Colabrotory we were able to filter down the rows to 1114 rows. Some of the data was scaled inconsistently before 1970 so we had to standardize the scale of measurements. The data set provided us initially with only coordinates, so we used Geopy to extract the different counties that werea affected. We also dropped columns that didn't relate to our purposes or were inconsistent. 
 
