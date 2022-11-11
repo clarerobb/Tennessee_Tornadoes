@@ -81,6 +81,8 @@ There are three targets that we are aiming to predict:
 
 - We have been able to achieve at least 50% accuracy with each of our targets. The accuracy that was achieved throughout the trial and testing was recorded and shown on the final document. Additionally, each version of the machine learning trail and error was commited to the savannah_posner branch after each target had achieved 50% accuracy. 
 
+- With over 80% accuracy we are able to predict the months in which the tornados are likely to occur. This was done by laying MinMaxScaler(), PolynomialCountSketch(), LogisticRegression() models using a pipeline. 
+
 ![Results](https://raw.githubusercontent.com/clarerobb/Tennessee_Tornadoes/main/Machine_Learning/Machine_Images/Screen%20Shot%202022-11-02%20at%201.12.25%20PM.png )
 
 ## Presentation
