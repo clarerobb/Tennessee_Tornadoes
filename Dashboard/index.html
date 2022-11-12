@@ -23,8 +23,8 @@
 </head>
 
 <body class="background">
-  
   <div class="container">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button> 
     <div class="row">
       <div class="col-xs-12">
         <nav class="navbar-inverse">
@@ -125,7 +125,7 @@
       <div class="container-fluid">
 		
         <!-- Carousel container -->
-        <div id="carousel" class="carousel slide" data-ride="carousel" style="height:500px">
+        <div id="carousel" class="carousel slide" data-ride="carousel" style="height:600px">
         
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -142,10 +142,12 @@
         <!-- Slide 1 -->
         <div class="item active">
           <div class="img-center-vertical">
-            <img src="static/images/imgdemo1.png" alt="0">
+            <img src="static/images/countvsavgmag600.png" alt="0">
               <div class="carousel-caption">
-                <h3>Test Text</h3>
-                <p>Look at this text!</p>
+                <font color="#4f4f4f">
+                <h3>Count vs. Average Magnitude</h3>
+                <p>Includes trend lines</p>
+              </font>
               </div>
           </div>
         </div>
@@ -153,10 +155,12 @@
         <!-- Slide 2 -->
         <div class="item">
           <div class="img-center-vertical">
-            <img src="static/images/imgdemo2.png" alt="1">
+            <img src="static/images/magtime600.png" alt="1">
             <div class="carousel-caption">
-              <h3>More Text</h3>
-              <p>Look at more of this text!</p>
+              <font color="#4f4f4f">
+              <h3>Combined Magnitudes Based on Time of Day</h3>
+              
+              </font>
             </div>
           </div>
         </div>
@@ -164,10 +168,12 @@
         <!-- Slide 3 -->
         <div class="item">
           <div class="img-center-vertical">
-            <img src="static/images/imgdemo3.png" alt="2">
+            <img src="static/images/fatvsinj.png" alt="2">
             <div class="carousel-caption">
-              <h3>Third Text</h3>
-              <p>Blah Blah Blah!</p>
+              <font color="#4f4f4f">
+              <h3>Fatalities vs. Injuries</h3>
+              
+              </font>
             </div>
           </div>
         </div>
@@ -175,10 +181,12 @@
         <!-- Slide 4 -->
         <div class="item">
           <div class="img-center-vertical">
-            <img src="static/images/imgdemo4.png" alt="3">
+            <img src="static/images/top25start.png" alt="3">
             <div class="carousel-caption">
-              <h3>4th Text</h3>
-              <p>Yada yada yada!</p>
+              <font color="#4f4f4f">
+              <h3>Top 25 Counties with Property Damage</h3>
+              <p>Based on Starting County</p>
+              </font>
             </div>
           </div>
         </div>
@@ -186,10 +194,12 @@
         <!-- Slide 5 -->
         <div class="item">
           <div class="img-center-vertical">
-            <img src="static/images/imgdemo5.png" alt="4">
+            <img src="static/images/top25end.png" alt="4">
             <div class="carousel-caption">
-              <h3>Fifth Text</h3>
-              <p>Stuff!</p>
+              <font color="#4f4f4f">
+              <h3>Top 25 Counties with Property Damage</h3>
+              <p>Based on Ending County</p>
+              </font>
             </div>
           </div>
         </div>
@@ -240,7 +250,7 @@
   <!-- Our Javascript -->
   
   <script type="text/javascript" src="static/js/map_logic2.js"></script>
-
+  <script type="text/javascript" src="static/js/button_logic.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -262,8 +272,7 @@ $(function () {
 })
 </script>
 
-  <!-- To delete -->
-  <script type="text/javascript" src="static/js/charts.js"></script>
+  
 </body>
 
 </html>
