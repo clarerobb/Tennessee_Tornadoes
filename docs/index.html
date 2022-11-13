@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tennessee Tornadoes</title>
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
+  <!-- d3 JavaScript -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+</head>
+
+<body class="background">
+  <div class="container">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button> 
+    <div class="row">
+      <div class="col-xs-12">
+        <nav class="navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="#summary">Summary</a></li>
+              <li><a href="#charts">Charts</a></li>
+              <li><a href="#mapid">Map</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+          </div>
+        </nav>
+      </div>
+      
+      
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="jumbotron text-center text-white"
+          style="border-style: solid; border-color:rgb(2, 37, 58); border-width: 2; height: 270px;">
+          <h1><font color="#919389">Tennessee Tornadoes</font></h1>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="jumbotron2" id="summary">
+          <h1><font color="#bbbbbb">Summary</font></h1>
+          <p></p>
+        </div>
+      </div>
+      <div class="col-xs-6"></div>
+    </div>
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <font color="white">
+          <div class="col-md-4">
+        
+              <h2>Tornadoes in Tennessee<small><font color="#bfbfbf"><br>Are they getting worse?</font></small></h2>
+
+            </div>
+          <div class="col-md-7">
+            <font size="4">
+              It seems recently there is wild weather all around us, and it seems to keep getting worse all the time.  Is it actually getting worse, or is it just media hype?  What about the tornadoes in Tenneessee?  While there have always been tornadoes in Tennessee, it seems that we hear more and more about tornadoes and property damage across the state.  As residents of Tennessee, we want to know: is it getting worse?<br><br>
+              In addition, can we predict where these twisters will strike?<br><br>
+              <b><u>Conclusions:</u></b><br>
+              Based on data shown in the charts below, trend lines show that the count of tornadoes is, in fact, <i>increasing</i> over time.  However, the trend line for average magnitude is pointing downward.  This could be a result of a higher frequency of lower magnitude tornadoes.  So, tornadoes may not necessarily be getting stronger, but they are definitely becoming more numerous.<br><br>
+              Combined magnitudes based on time of day show that tornadoes are more frequent and strongest between 4PM and 7PM.  Property damage losses are measured by categorical range of dollar values instead of actual dollar amounts. Therefore, property loss statistics cannot give an actual dollar amount but can show the trend in each county. 
+            </font>
+            
+          </div>
+        </font>
+        <div class="col-xs-1"></div>
+      </div>
+  </div><br>
+  
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="jumbotron2" id="charts">
+        <h1><font color="#bbbbbb">Charts</font></h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="col-xs-6"></div>
+  </div>
+    <div class="row">
+      <!-- <div class="col-xs-1"></div> -->
+        
+      <!-- <div class="col-xs-6 col-sm-4 col-md-2">
+        <div class="well">
+          <h5>Tornado Select:</h5> 
+
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Tornado Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"> 
+          </div>
+        </div>
+      </div> -->
+
+
+      <!-- <div class="col-xs-10 col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-xs-10 col-md-5">
+        <div id="gauge"></div>
+      </div>
+      <div class="col-xs-1"></div> -->
+      <div class="container-fluid">
+		
+        <!-- Carousel container -->
+        <div id="carousel" class="carousel slide" data-ride="carousel" style="height:600px">
+        
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+        <li data-target="#carousel" data-slide-to="3"></li>
+        <li data-target="#carousel" data-slide-to="4"></li>
+        <li data-target="#carousel" data-slide-to="5"></li>
+        </ol>
+        
+        <!-- Content -->
+        <div class="carousel-inner" role="listbox">
+        
+        <!-- Slide 1 -->
+        <div class="item active">
+          <div class="img-center-vertical">
+            <img src="static/images/countvsavgmag600.png" alt="0">
+              <div class="carousel-caption">
+                <font color="#4f4f4f">
+                <h3>Count vs. Average Magnitude</h3>
+                <p>Includes trend lines</p>
+              </font>
+              </div>
+          </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="item">
+          <div class="img-center-vertical">
+            <img src="static/images/monthcount.png" alt="1">
+            <div class="carousel-caption">
+              <font color="#4f4f4f">
+              <h3>Total Count by Month</h3>
+              
+              </font>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="item">
+          <div class="img-center-vertical">
+            <img src="static/images/magtime600.png" alt="2">
+            <div class="carousel-caption">
+              <font color="#4f4f4f">
+              <h3>Combined Magnitudes Based on Time of Day</h3>
+              
+              </font>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide 4 -->
+        <div class="item">
+          <div class="img-center-vertical">
+            <img src="static/images/fatvsinj.png" alt="3">
+            <div class="carousel-caption">
+              <font color="#4f4f4f">
+              <h3>Fatalities vs. Injuries</h3>
+              
+              </font>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide 5 -->
+        <div class="item">
+          <div class="img-center-vertical">
+            <img src="static/images/top25start.png" alt="4">
+            <div class="carousel-caption">
+              <font color="#4f4f4f">
+              <h3>Top 25 Counties with Property Damage</h3>
+              <p>Based on Starting County</p>
+              </font>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="item">
+          <div class="img-center-vertical">
+            <img src="static/images/top25end.png" alt="5">
+            <div class="carousel-caption">
+              <font color="#4f4f4f">
+              <h3>Top 25 Counties with Property Damage</h3>
+              <p>Based on Ending County</p>
+              </font>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+        <!-- Previous/Next controls -->
+        <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+          <span class="icon-prev" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+          <span class="icon-next" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+          </a>
+    
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="jumbotron2">
+          <h1><font color="#bbbbbb">Interactive Map</font></h1>
+          <p></p>
+        </div>
+      </div>
+      <div class="col-xs-6"></div>
+    </div>
+    <div class="row">
+      
+        <div class="col-xs-12">
+          <font color="#4f4f4f" size="4"><i>Each line or circle represents an indivdual tornado track.<br>
+          Click on each for more information.  Use controls to filter by decade.</i>
+          <div id="mapid"></div>
+          </font>
+        </div>
+    </div>
+  </div>
+    
+    
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+  <!-- API key -->
+  <script type="text/javascript" src="static/js/config.js"></script>
+
+  <!-- Our Javascript -->
+  
+  <script type="text/javascript" src="static/js/map_logic2.js"></script>
+  <script type="text/javascript" src="static/js/button_logic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<!-- jQuery library -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<!-- Initialize Bootstrap functionality -->
+<script>
+// Initialize tooltip component
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+// Initialize popover component
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+
+  
+</body>
+
+</html>

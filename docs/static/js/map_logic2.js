@@ -136,7 +136,7 @@ y1950.addTo(map);
 
 // // // 1960s
 
-d3.csv("Dashboard/data/TN_DF_DASH.csv").then(function(data) {
+d3.csv("data/TN_DF_DASH.csv").then(function(data) {
     var coord = data.filter(function(d) { return d.YR >= '1960' && d.YR < '1970'});
     console.log(coord);
     coord.forEach(function(coord) {
@@ -187,7 +187,7 @@ y1960.addTo(map);
 
 // // // 1970s
 
-d3.csv("Dashboard/data/TN_DF_DASH.csv").then(function(data) {
+d3.csv("data/TN_DF_DASH.csv").then(function(data) {
     var coord = data.filter(function(d) { return d.YR >= '1970' && d.YR < '1980'});
     console.log(coord);
     coord.forEach(function(coord) {
@@ -238,7 +238,7 @@ y1970.addTo(map);
 
 // // // 1980s
 
-d3.csv("Dashboard/data/TN_DF_DASH.csv").then(function(data) {
+d3.csv("data/TN_DF_DASH.csv").then(function(data) {
     var coord = data.filter(function(d) { return d.YR >= '1980' && d.YR < '1990'});
     console.log(coord);
     coord.forEach(function(coord) {
@@ -289,7 +289,7 @@ y1980.addTo(map);
 
 // // // 1990s
 
-d3.csv("Dashboard/data/TN_DF_DASH.csv").then(function(data) {
+d3.csv("data/TN_DF_DASH.csv").then(function(data) {
     var coord = data.filter(function(d) { return d.YR >= '1990' && d.YR < '2000'});
     console.log(coord);
     coord.forEach(function(coord) {
@@ -340,7 +340,7 @@ y1990.addTo(map);
 
 // // // 2000-2013
 
-d3.csv("Dashboard/data/TN_DF_DASH.csv").then(function(data) {
+d3.csv("data/TN_DF_DASH.csv").then(function(data) {
     var coord = data.filter(function(d) { return d.YR >= '2000' && d.YR < '2013'});
     console.log(coord);
     coord.forEach(function(coord) {
