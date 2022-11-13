@@ -6,7 +6,11 @@ technology.md
 Final_Machine_Learning_Pred_merged.ipynb
 
 #Dashboard Folder
-Dashboard/TN_Tornadoes.pdf
+Dashboard/
+
+#Docs
+docs/attempt3
+docs/TN_Tornadoes.pdf
 
 #Database Folder
 Database/.DS_Store
@@ -29,7 +33,7 @@ Machine_Learning/.DS_Store
 Machine_Learning/__pycache__/
 Machine_Learning/config.py
 Machine_Learning/Machine_Images/
-Machine_Learning/ML_Trial_Error
+Machine_Learning/ML_Trial_Error.ipynb
 
 #Presentation Folder
 Presentations/Presentations
