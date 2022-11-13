@@ -1,13 +1,47 @@
+SPC_severe_database_description.pdf
+.ipynb_checkpoints
+config.js
+.DS_Store
+technology.md 
+Final_Machine_Learning_Pred_merged.ipynb
+
+#Dashboard Folder
+Dashboard/TN_Tornadoes.pdf
+
+#Database Folder
+Database/.DS_Store
+Database/QuickDBD-TN_Tornadoes.png
+Database/Updated_QuickDBD-TN_Tornadoes.png
+Database/Segment_1/
+Database/Segment_2/Cleaned-TN_Tornadoes.png
+
+#ETL Folder
+ETL/.DS_Store
+ETL/updated_columns.ipynb
+ETL/updated_columns2.ipynb
+ETL/Updated_Cleaned.csv
+
+#Machine_Learning Folder
 Machine_Learning/.ipynb_checkpoints/Final_Machine_Learning_Pred-checkpoint.ipynb
 Machine_Learning/.ipynb_checkpoints/GetCounties-checkpoint.ipynb
 Machine_Learning/.ipynb_checkpoints/ML_Trial_Error-checkpoint.ipynb
 Machine_Learning/.DS_Store
-SPC_severe_database_description.pdf
-ETL/.DS_Store
-Database/.DS_Store
-Working_README/.DS_Store
-.ipynb_checkpoints
-config.js
-.DS_Store
 Machine_Learning/__pycache__/
 Machine_Learning/config.py
+Machine_Learning/Machine_Images/
+Machine_Learning/ML_Trial_Error
+
+#Presentation Folder
+Presentations/Presentations
+Presentations/Final Project Segment 2 Presentation.pdf
+Presentations/Final Project Segment 3 Presentation.pdf
+
+#Resources
+Resources/Historical_Tornado_Tracks.csv
+Resources/Tennessee_Specific_Tornadoes.csv
+Resources/Updated_Cleaned.csv
+
+#Working_README Folder
+Working_README/
+Working_README/.DS_Store
+
