@@ -23,8 +23,8 @@
 </head>
 
 <body class="background">
-  
   <div class="container">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button> 
     <div class="row">
       <div class="col-xs-12">
         <nav class="navbar-inverse">
@@ -67,18 +67,20 @@
     <br>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-1"></div>
         <font color="white">
           <div class="col-md-4">
         
-              <h3>Tornadoes in Tennessee<small><font color="#bfbfbf"><br>Are they getting worse?</font></small></h3>
+              <h2>Tornadoes in Tennessee<small><font color="#bfbfbf"><br>Are they getting worse?</font></small></h2>
 
             </div>
-          <div class="col-md-6">
-            
-              Introductory Paragraph<br><br>
-              Machine Learning Results<br><br>
-              Conclusions
+          <div class="col-md-7">
+            <font size="4">
+              It seems recently there is wild weather all around us, and it seems to keep getting worse all the time.  Is it actually getting worse, or is it just media hype?  What about the tornadoes in Tenneessee?  While there have always been tornadoes in Tennessee, it seems that we hear more and more about tornadoes and property damage across the state.  As residents of Tennessee, we want to know: is it getting worse?<br><br>
+              In addition, can we predict where these twisters will strike?<br><br>
+              <b><u>Conclusions:</u></b><br>
+              Based on data shown in the charts below, trend lines show that the count of tornadoes is, in fact, <i>increasing</i> over time.  However, the trend line for average magnitude is pointing downward.  This could be a result of a higher frequency of lower magnitude tornadoes.  So, tornadoes may not necessarily be getting stronger, but they are definitely becoming more numerous.<br><br>
+              Combined magnitudes based on time of day show that tornadoes are more frequent and strongest between 4PM and 7PM.  Property damage losses are measured by categorical range of dollar values instead of actual dollar amounts. Therefore, property loss statistics cannot give an actual dollar amount but can show the trend in each county. 
+            </font>
             
           </div>
         </font>
@@ -125,7 +127,7 @@
       <div class="container-fluid">
 		
         <!-- Carousel container -->
-        <div id="carousel" class="carousel slide" data-ride="carousel" style="height:500px">
+        <div id="carousel" class="carousel slide" data-ride="carousel" style="height:600px">
         
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -134,6 +136,7 @@
         <li data-target="#carousel" data-slide-to="2"></li>
         <li data-target="#carousel" data-slide-to="3"></li>
         <li data-target="#carousel" data-slide-to="4"></li>
+        <li data-target="#carousel" data-slide-to="5"></li>
         </ol>
         
         <!-- Content -->
@@ -142,10 +145,12 @@
         <!-- Slide 1 -->
         <div class="item active">
           <div class="img-center-vertical">
-            <img src="static/images/imgdemo1.png" alt="0">
+            <img src="static/images/countvsavgmag600.png" alt="0">
               <div class="carousel-caption">
-                <h3>Test Text</h3>
-                <p>Look at this text!</p>
+                <font color="#4f4f4f">
+                <h3>Count vs. Average Magnitude</h3>
+                <p>Includes trend lines</p>
+              </font>
               </div>
           </div>
         </div>
@@ -153,21 +158,25 @@
         <!-- Slide 2 -->
         <div class="item">
           <div class="img-center-vertical">
-            <img src="static/images/imgdemo2.png" alt="1">
+            <img src="static/images/monthcount.png" alt="1">
             <div class="carousel-caption">
-              <h3>More Text</h3>
-              <p>Look at more of this text!</p>
+              <font color="#4f4f4f">
+              <h3>Total Count by Month</h3>
+              
+              </font>
             </div>
           </div>
         </div>
-        
+
         <!-- Slide 3 -->
         <div class="item">
           <div class="img-center-vertical">
-            <img src="static/images/imgdemo3.png" alt="2">
+            <img src="static/images/magtime600.png" alt="2">
             <div class="carousel-caption">
-              <h3>Third Text</h3>
-              <p>Blah Blah Blah!</p>
+              <font color="#4f4f4f">
+              <h3>Combined Magnitudes Based on Time of Day</h3>
+              
+              </font>
             </div>
           </div>
         </div>
@@ -175,21 +184,38 @@
         <!-- Slide 4 -->
         <div class="item">
           <div class="img-center-vertical">
-            <img src="static/images/imgdemo4.png" alt="3">
+            <img src="static/images/fatvsinj.png" alt="3">
             <div class="carousel-caption">
-              <h3>4th Text</h3>
-              <p>Yada yada yada!</p>
+              <font color="#4f4f4f">
+              <h3>Fatalities vs. Injuries</h3>
+              
+              </font>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Slide 5 -->
+        <div class="item">
+          <div class="img-center-vertical">
+            <img src="static/images/top25start.png" alt="4">
+            <div class="carousel-caption">
+              <font color="#4f4f4f">
+              <h3>Top 25 Counties with Property Damage</h3>
+              <p>Based on Starting County</p>
+              </font>
             </div>
           </div>
         </div>
 
-        <!-- Slide 5 -->
+        <!-- Slide 6 -->
         <div class="item">
           <div class="img-center-vertical">
-            <img src="static/images/imgdemo5.png" alt="4">
+            <img src="static/images/top25end.png" alt="5">
             <div class="carousel-caption">
-              <h3>Fifth Text</h3>
-              <p>Stuff!</p>
+              <font color="#4f4f4f">
+              <h3>Top 25 Counties with Property Damage</h3>
+              <p>Based on Ending County</p>
+              </font>
             </div>
           </div>
         </div>
@@ -240,7 +266,7 @@
   <!-- Our Javascript -->
   
   <script type="text/javascript" src="static/js/map_logic2.js"></script>
-
+  <script type="text/javascript" src="static/js/button_logic.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
@@ -262,8 +288,7 @@ $(function () {
 })
 </script>
 
-  <!-- To delete -->
-  <script type="text/javascript" src="static/js/charts.js"></script>
+  
 </body>
 
 </html>

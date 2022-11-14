@@ -86,7 +86,7 @@ L.control.layers(baseMaps, overlays).addTo(map);
 
 // // // 1950s
 
-d3.csv("Dashboard/data/TN_DF_DASH.csv").then(function(data) {
+d3.csv("data/TN_DF_DASH.csv").then(function(data) {
     var coord = data.filter(function(d) { return d.YR >= '1950' && d.YR < '1960'});
     console.log(coord);
     coord.forEach(function(coord) {
