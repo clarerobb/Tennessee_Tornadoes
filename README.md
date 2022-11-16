@@ -82,9 +82,23 @@ There are three targets that we are aiming to predict:
 
 - We have been able to achieve at least 50% accuracy with each of our targets. The accuracy that was achieved throughout the trial and testing was recorded and shown on the final document. Additionally, each version of the machine learning trail and error was commited to the savannah_posner branch after each target had achieved 50% accuracy. 
 
+We used the machine learning model to predict the estimated magnitude of a tornado at 54% accuracy.
+
+![](https://raw.githubusercontent.com/clarerobb/Tennessee_Tornadoes/main/Machine_Learning/Screen%20Shot%202022-11-15%20at%207.19.14%20PM.png)
+
+We used the machine learning model to predict the estimated property loss of a tornado at 55% accuracy.
+
+
+![](https://raw.githubusercontent.com/clarerobb/Tennessee_Tornadoes/main/Machine_Learning/Screen%20Shot%202022-11-15%20at%207.19.43%20PM.png)
+
 - With over 80% accuracy we are able to predict the months in which the tornados are likely to occur. This was done by laying MinMaxScaler(), PolynomialCountSketch(), LogisticRegression() models using a pipeline. 
 
-<img width="241" alt="Screen Shot 2022-11-14 at 5 17 12 PM" src="https://user-images.githubusercontent.com/106405775/201787894-bc158c19-00e3-464d-af78-e6fa30e7b8bd.png">
+
+
+![](https://raw.githubusercontent.com/clarerobb/Tennessee_Tornadoes/main/Machine_Learning/Screen%20Shot%202022-11-15%20at%207.19.02%20PM.png)
+
+#### Future reccommendations: 
+We recommend when performing the ETL on the dataset to eliminate outliers that could distort the data and lower the machine learning model's accuracy.
 
 ## Presentation
 Presentation can be found [here](https://github.com/clarerobb/Tennessee_Tornadoes/blob/main/Presentations/Final%20Project%20Presentation.pdf).
